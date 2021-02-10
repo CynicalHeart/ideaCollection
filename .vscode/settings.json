@@ -1,4 +1,5 @@
 {
     "jupyter.jupyterServerType": "remote",
-    "python.pythonPath": "D:\\envir\\miniconda\\envs\\mtmc\\python.exe"
+    "python.pythonPath": "D:\\envir\\miniconda\\envs\\mtmc\\python.exe",
+    "python.languageServer": "Pylance"
 }
