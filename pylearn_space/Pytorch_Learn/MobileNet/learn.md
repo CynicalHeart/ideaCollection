@@ -47,5 +47,25 @@ Inverted Residual block：
 c是输出特征矩阵深度channel  
 n是bottleneck的重复次数  
 s是步距。
+  
+  
+### MobileNetv3
 
+创新点：
+- Block(bneck)：基于倒残差结构进行简单的改动,加入注意力机制并更新了激活函数
+- NAS搜索
+- 重新设计耗时层结构（第一个卷积层的卷积核个数32->16）
 
+> 激活函数优化 sigmoid->h-sigmoid 、 swish->h-swish  
+>  
+> $h-sigmoid = \frac{ReLU6(x+3)}{6}$
+> 
+> $h-swish[x] = x\frac{ReLU6(x+3)}{6}$
+
+**注意力机制:**  
+
+对于每一个channel先进行池化处理，再通过两个全连接层得到输出的向量。  
+
+**网络结构：**  
+
+![网络结构](https://img.imgdb.cn/item/6034bcaa5f4313ce253f7d7d.jpg)
