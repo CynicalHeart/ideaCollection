@@ -1,5 +1,6 @@
 {
     "jupyter.jupyterServerType": "local",
     "python.pythonPath": "D:\\envir\\miniconda\\envs\\mtmc\\python.exe",
-    "python.languageServer": "Jedi"
+    "python.languageServer": "Jedi",
+    "python.linting.flake8Enabled": true
 }
