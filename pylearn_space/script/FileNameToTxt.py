@@ -8,7 +8,7 @@ def convert2txt(path, output_path):
     files = os.listdir(path)
     with open(output_path, 'w') as f:
         for file in files:
-            file_name= os.path.basename(file)
+            file_name = os.path.basename(file)
             full_name = os.path.join(path, file_name)
             f.write(full_name+'\n')
 
