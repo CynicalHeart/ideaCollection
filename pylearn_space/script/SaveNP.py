@@ -80,11 +80,27 @@ def plan_4():
     print(r)
     print(r.shape)
 
+
+def plan_5():
+    feat = []
+    for i in range(90):
+        feat.append(np.random.rand(512))
+    with open('feature.bin', 'ab') as f:
+        np.savetxt(f, feat, fmt="%.6f")
+
+    r = np.loadtxt('feature.bin')
+    print(type(r))
+    print(r)
+    print(r.shape)
+
+
 # plan_1()  # 无法追加
 
 # plan_2()  # 读取出来的是一维 不存shape
 
 # plan_3()  # 文件流会覆盖掉
 
+# plan_4()  # 存txt转Bin可保存其格式和shape
 
-plan_4()  # 存txt转Bin可保存其格式和shape
+
+plan_5()  # 证明list中存numpy可以直接转数组存入文件中
