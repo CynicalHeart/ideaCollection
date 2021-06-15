@@ -83,7 +83,7 @@ def show_img(img, transforms_l=None):
     plt.figure('随机灰度擦除实验')
     plt.subplot(1, 6, 1)
     plt.axis('off')
-    plt.title('target')
+    # plt.title('target')
     plt.imshow(img)
     if transforms_l is not None:
         for i in range(1, 6):
@@ -137,7 +137,7 @@ def show_img_3(img, transforms_l=None):
     plt.figure('预处理')
     plt.subplot(1, 6, 1)
     plt.axis('off')
-    plt.title('target')
+    # plt.title('target')
     plt.imshow(img)
 
     to = transforms.ToTensor()
@@ -163,15 +163,16 @@ norm_std = [0.229, 0.224, 0.225]
 
 # 测试
 if __name__ == "__main__":
-    image_path = r'D:/workspace/DeepL/dataset/market1501/bounding_box_train/0114_c2s3_071702_01.jpg'
+    image_path = r'D:/workspace/MTMC/dataset/market1501/bounding_box_train/0110_c3s1_018326_01.jpg'
     image = Image.open(image_path)
     transforms_list = [
-        transforms.Pad(10),
-        transforms.Grayscale(1),
+        transforms.Grayscale(3),
+        transforms.RandomAffine(0, scale=(0.8, 0.8)),
         transforms.RandomHorizontalFlip(1),
-        transforms.ColorJitter(brightness=1, contrast=1, saturation=1),
+        transforms.ColorJitter(
+            brightness=0.5, contrast=0.5, saturation=0.5, hue=0.2),
         # transforms.transforms.ToTensor(),  # 像数据转换为torch.FloatTensor(32位浮点数格式)
-        # # 归一化:channel=（channel-mean）/std
+        # 归一化:channel=（channel-mean）/std
         transforms.Normalize(norm_mean, norm_std)
     ]
 
