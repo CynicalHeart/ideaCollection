@@ -176,17 +176,17 @@ if __name__ == "__main__":
         transforms.Normalize(norm_mean, norm_std)
     ]
 
-    show_img_3(image, transforms_list)
-    # image_list = [
-    #     'D:/workspace/DeepL/dataset/market1501/bounding_box_train/0042_c3s3_064169_01.jpg',
-    #     'D:/workspace/DeepL/dataset/market1501/bounding_box_train/0052_c2s1_005076_01.jpg',
-    #     'D:/workspace/DeepL/dataset/market1501/bounding_box_train/0093_c2s1_014226_01.jpg',
-    #     'D:/workspace/DeepL/dataset/market1501/bounding_box_train/0306_c6s3_090842_02.jpg',
-    #     'D:/workspace/DeepL/dataset/market1501/bounding_box_train/0554_c6s2_000593_01.jpg',
-    #     'D:/workspace/DeepL/dataset/market1501/bounding_box_train/0843_c3s2_107178_07.jpg',
-    #     'D:/workspace/DeepL/dataset/market1501/bounding_box_train/0547_c2s1_157341_02.jpg'
-    # ]
-    # show_img_2(image_list, RandomGrayscaleErasing(1))
+    # show_img_3(image, transforms_list)
+    image_list = [
+        'D:/workspace/MTMC/dataset/market1501/bounding_box_train/0042_c3s3_064169_01.jpg',
+        'D:/workspace/MTMC/dataset//market1501/bounding_box_train/0052_c2s1_005076_01.jpg',
+        'D:/workspace/MTMC/dataset/market1501/bounding_box_train/0093_c2s1_014226_01.jpg',
+        'D:/workspace/MTMC/dataset/market1501/bounding_box_train/0306_c6s3_090842_02.jpg',
+        'D:/workspace/MTMC/dataset/market1501/bounding_box_train/0554_c6s2_000593_01.jpg',
+        'D:/workspace/MTMC/dataset/market1501/bounding_box_train/0843_c3s2_107178_07.jpg',
+        'D:/workspace/MTMC/dataset/market1501/bounding_box_train/0547_c2s1_157341_02.jpg'
+    ]
+    show_img_2(image_list, RandomGrayscaleErasing(1))
     # transforms_r = [
     #     transforms.RandomErasing(p=1),
     #     RandomGrayscaleErasing(1)
