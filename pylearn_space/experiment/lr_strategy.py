@@ -1,7 +1,7 @@
 # 学习率绘制
 from matplotlib import pyplot as plt
 
-max_epoch = 70  # 最大迭代数
+max_epoch = 120  # 最大迭代数
 init_lr = 0.00035  # 3.5 × 10^-4
 lr = init_lr
 warm_up_step = 10  # 前n个epoch启用warm-up策略
@@ -17,7 +17,7 @@ def warm_up_rate_o(epoch):
     if epoch <= warm_up_step:
         res = epoch / warm_up_step
         return init_lr * res
-    elif warm_up_step < epoch <= 30:
+    elif warm_up_step < epoch <= 40:
 
         return init_lr
     else:
@@ -32,7 +32,7 @@ def warm_up_rate_t(epoch):
         return init_lr * res
     elif warm_up_step < epoch <= 40:
         return init_lr
-    elif 40 < epoch <= 60:
+    elif 40 < epoch <= 70:
         return init_lr * 0.1
     else:
         return init_lr * 0.01
