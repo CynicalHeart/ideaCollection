@@ -1,8 +1,9 @@
 {
-    "jupyter.jupyterServerType": "local",
     "python.pythonPath": "D:\\envir\\miniconda\\python.exe",
     "python.languageServer": "Pylance",
-    "python.linting.flake8Enabled": true,
-    "python.linting.pylintEnabled": false,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--skip-string-normalization"
+    ]
 }
